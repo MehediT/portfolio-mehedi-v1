@@ -3,7 +3,7 @@ import * as React from "react";
 import { IconSvgProps } from "@/types";
 
 export const Logo: React.FC<IconSvgProps> = ({
-  size = 36,
+  size = 18,
   width,
   height,
   ...props
@@ -11,13 +11,19 @@ export const Logo: React.FC<IconSvgProps> = ({
   <svg
     fill="none"
     height={size || height}
-    viewBox="0 0 32 32"
+    viewBox="0 0 36 36"
     width={size || width}
     {...props}
   >
     <path
       clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+      d="M23.1545 30.9105V9.85821H15.1261V5H36V9.85821H27.9716V30.9105H23.1545Z"
+      fill="currentColor"
+      fillRule="evenodd"
+    />
+    <path
+      clipRule="evenodd"
+      d="M0 31V13.9132H5.39345L9.216 21.7933L12.9862 13.9132H18.3796V31H12.7505V23.7301L10.656 28.0814H7.72364L5.62909 23.7301V31H0Z"
       fill="currentColor"
       fillRule="evenodd"
     />
@@ -144,13 +150,13 @@ export const HeartFilledIcon = ({
     focusable="false"
     height={size || height}
     role="presentation"
-    viewBox="0 0 24 24"
+    viewBox="0 -960 960 960"
     width={size || width}
     {...props}
   >
-    <path
-      d="M12.62 20.81c-.34.12-.9.12-1.24 0C8.48 19.82 2 15.69 2 8.69 2 5.6 4.49 3.1 7.56 3.1c1.82 0 3.43.88 4.44 2.24a5.53 5.53 0 0 1 4.44-2.24C19.51 3.1 22 5.6 22 8.69c0 7-6.48 11.13-9.38 12.12Z"
+    <path 
       fill="currentColor"
+      d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h404q-4 20-4 40t4 40H160l320 200 146-91q14 13 30.5 22.5T691-572L480-440 160-640v400h640v-324q23-5 43-14t37-22v360q0 33-23.5 56.5T800-160H160Zm0-560v480-480Zm600 80q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Z"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
