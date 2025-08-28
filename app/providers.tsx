@@ -9,9 +9,13 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { I18nProviderClient } from "@/locales/client";
 
 export interface ProvidersProps {
-  locale: string;
   children: React.ReactNode;
   themeProps?: ThemeProviderProps;
+  localeProps: LocaleProps;
+}
+export interface LocaleProps {
+  locale: string;
+  defaultLocale: string;
 }
 
 declare module "@react-types/shared" {
@@ -22,14 +26,16 @@ declare module "@react-types/shared" {
   }
 }
 
-export function Providers({locale, children, themeProps }: ProvidersProps) {
+export function Providers({children, themeProps, localeProps }: ProvidersProps) {
   const router = useRouter();
 
   return (
-    <I18nProviderClient locale={locale}>
-      <HeroUIProvider navigate={router.push}>
-        <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
-      </HeroUIProvider>
-    </I18nProviderClient>
+    <HeroUIProvider navigate={router.push}>
+      <NextThemesProvider {...themeProps}>
+        <I18nProviderClient locale={localeProps.locale}>
+          {children}
+        </I18nProviderClient>
+      </NextThemesProvider>
+    </HeroUIProvider>
   );
 }
