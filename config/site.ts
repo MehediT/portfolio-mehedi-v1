@@ -73,6 +73,7 @@ export async function siteConfig() {
       github: "https://github.com/mehedit",
       twitter: "https://twitter.com/mehedit",
       discord: "https://discord.gg/9b6yyZKmH4",
+      cv: "/cv",
       sponsor: "https://patreon.com/jrgarciadev",
     },
   };
