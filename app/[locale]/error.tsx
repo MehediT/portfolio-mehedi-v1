@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-
+import { useI18n, useScopedI18n } from "@/locales/client";
 export default function Error({
   error,
   reset,
@@ -14,17 +14,18 @@ export default function Error({
     /* eslint-disable no-console */
     console.error(error);
   }, [error]);
+  const scopedT = useScopedI18n('error')
 
   return (
     <div>
-      <h2>Something went wrong!</h2>
+      <h2>{scopedT("title")}</h2>
       <button
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
         }
       >
-        Try again
+        {scopedT("try.again")}
       </button>
     </div>
   );
