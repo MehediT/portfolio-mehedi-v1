@@ -25,6 +25,7 @@ import {
   SearchIcon,
   Logo,
 } from "@/components/icons";
+import LangSwitch from "./lang-switch";
 
 export async function Navbar() {
   const config = await siteConfig();
@@ -92,6 +93,7 @@ export async function Navbar() {
             <GithubIcon className="text-default-500" />
           </Link>
           <ThemeSwitch />
+          <LangSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
@@ -99,11 +101,11 @@ export async function Navbar() {
             isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={config.links.sponsor}
+            href={config.contact.href}
             startContent={<HeartFilledIcon className="text-danger" />}
             variant="flat"
           >
-            Sponsor
+            {config.contact.label}
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -113,19 +115,20 @@ export async function Navbar() {
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
+        <LangSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {config.navMenuItems.map((item, index) => (
+          {config.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
                 color={
                   index === 2
                     ? "primary"
-                    : index === config.navMenuItems.length - 1
+                    : index === config.navItems.length - 1
                       ? "danger"
                       : "foreground"
                 }
