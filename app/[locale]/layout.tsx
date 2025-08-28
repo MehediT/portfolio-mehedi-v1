@@ -34,14 +34,17 @@ export default async function RootLayout({
 
   return (
     <html suppressHydrationWarning lang="en">
-      <head /> 
+      <head />
       <body
         className={clsx(
           "min-h-screen text-foreground bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
-        <Providers locale={locale} themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers
+          localeProps={{locale : locale, defaultLocale: 'en'}}
+          themeProps={{ attribute: "class", defaultTheme: "system"}}
+        >
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
