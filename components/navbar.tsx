@@ -23,12 +23,13 @@ import {
   DiscordIcon,
   HeartFilledIcon,
   SearchIcon,
-  Logo,
 } from "@/components/icons";
 import LangSwitch from "./lang-switch";
+import { getI18n } from "@/locales/server";
 
 export async function Navbar() {
   const config = await siteConfig();
+  const t = await getI18n();
 
   const searchInput = (
     <Input
@@ -56,8 +57,7 @@ export async function Navbar() {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo className="text-purple-300" />
-            <p className="font-bold text-inherit">Mehedi</p>
+            <p className="font-bold text-inherit">{t("global.firstName")}</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">

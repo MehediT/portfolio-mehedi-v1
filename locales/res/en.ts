@@ -1,7 +1,10 @@
 export default {
   'global' : {
-    'portfolio.title' : 'Mehedi Touré',
-    'portfolio.description': 'Personal portfolio of Mehedi Touré — developer, creator, and lifelong learner.',
+    "firstName": "Mehedi",
+    "lastName": "Toure",
+    "fullname": "Mehedi Toure",
+    'portfolio.title' : 'Mehedi Toure',
+    'portfolio.description': 'Personal portfolio of Mehedi Toure — developer, creator, and lifelong learner.',
   },
   'navbar' : {
     'home': 'Home',
@@ -18,7 +21,7 @@ export default {
   },
   'home': {
     'hi.im': 'Hi, I\'m',
-    'name': 'Mehedi Touré',
+    'name': 'Mehedi Toure',
     'description': 'Full-stack & mobile developer crafting intelligent applications that blend clean design, modern technologies, and AI-driven features.',
     'get.my.cv': 'Get my CV'
   }
