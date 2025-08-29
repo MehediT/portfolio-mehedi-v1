@@ -11,9 +11,10 @@ import { Navbar } from "@/components/navbar";
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  return getAppMetadata(params.locale);
+  const { locale } = await params;
+  return getAppMetadata(locale);
 }
 
 export const viewport: Viewport = {
