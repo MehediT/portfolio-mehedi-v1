@@ -15,5 +15,11 @@ export default {
     'title': 'Something went wrong!',
     'description': 'An unexpected error has occurred. Please try again later.',
     'try.again': 'Try again'
+  },
+  'home': {
+    'hi.im': 'Hi, I\'m',
+    'name': 'Mehedi Touré',
+    'description': 'Full-stack & mobile developer crafting intelligent applications that blend clean design, modern technologies, and AI-driven features.',
+    'get.my.cv': 'Get my CV'
   }
 } as const

@@ -14,5 +14,11 @@ export default {
   'error': {
     'title': 'Une erreur est survenue',
     'try.again': 'Réessayer'
+  },
+  'home' : {
+    'hi.im': 'Bonjour, je suis',
+    'name': 'Méhédi Touré',
+    'description': 'Développeur full-stack et mobile, je crée des applications intelligentes alliant design épuré, technologies modernes et fonctionnalités alimentées par l\'IA.',
+    'get.my.cv': 'Obtenir mon CV'
   }
 } as const
