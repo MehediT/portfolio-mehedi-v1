@@ -1,8 +1,15 @@
 import { title } from "@/components/primitives";
 
-export default function AboutPage() {
+type AboutPageProps = {
+  id?: string;
+  className?: string;
+};
+
+export default async function AboutPage(
+  { id, className }: AboutPageProps
+) {
   return (
-    <div>
+    <div className={className}>
       <h1 className={title()}>About</h1>
     </div>
   );
