@@ -13,7 +13,7 @@ export default {
     skills: "Compétences",
     projects: "Projets",
     experience: "Expérience",
-    "contact.me": "Contactez-moi",
+    contact: "Contact",
   },
   error: {
     title: "Une erreur est survenue",

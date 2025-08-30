@@ -32,7 +32,7 @@ export async function siteConfig() {
       },
     ],
     contact : {
-      label: tNavbar("contact.me"),
+      label: tNavbar("contact"),
       href: "/contact",
     },
     links: {
