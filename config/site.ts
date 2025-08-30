@@ -32,12 +32,13 @@ export async function siteConfig() {
       },
     ],
     contact : {
-      label: tNavbar("contact.me"),
+      label: tNavbar("contact"),
       href: "/contact",
     },
     links: {
       github: "https://github.com/mehedit",
-      twitter: "https://twitter.com/mehedit",
+      twitter: "https://twitter.com/MehediToure",
+      twitterUser: "@MehediToure",
       discord: "https://discord.gg/9b6yyZKmH4",
       cv: "/cv",
       sponsor: "https://patreon.com/jrgarciadev",
